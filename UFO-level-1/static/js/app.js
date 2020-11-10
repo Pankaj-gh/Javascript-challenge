@@ -44,7 +44,7 @@ filteredData.forEach(element => {
 });
 });
 
-// summary.append("td").text()
+summary.append("td").text()
 
 
 
