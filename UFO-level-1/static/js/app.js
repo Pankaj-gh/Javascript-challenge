@@ -18,7 +18,37 @@ tableData.forEach(element => {
 var button = d3.select("#filter-btn");
 
 
+button.on("click",function() {
 
 var inpfield = d3.select("#datetime");
 var inpvalue = inpfield.property("value");
+// console.log(inpvalue);
+
+
+var filteredData = tableData.filter(data => data.datetime === inpvalue);
+// console.log(filteredData);
+
+
+
+var summary = d3.select("tbody")
+
+summary.html("");
+
+filteredData.forEach(element => {
+    var row = summary.append("tr");
+
+    Object.values(element).forEach(value => {
+        row.append("td").text(value);
+    });
+
+});
+});
+
+// summary.append("td").text()
+
+
+
+
+
+
       
