@@ -2,6 +2,8 @@
 var tableData = data;
 
 // YOUR CODE HERE!
+// Creating Variable for tbody and selecting it
+
 
 var tbody = d3.select("tbody");
 
@@ -22,11 +24,11 @@ button.on("click",function() {
 
 var inpfield = d3.select("#datetime");
 var inpvalue = inpfield.property("value");
-// console.log(inpvalue);
+
 
 
 var filteredData = tableData.filter(data => data.datetime === inpvalue);
-// console.log(filteredData);
+
 
 
 
