@@ -20,13 +20,5 @@ var button = d3.select("#filter-btn");
 
 
 var inpfield = d3.select("#datetime");
-
+var inpvalue = inpfield.property("value");
       
-tableData.forEach(element => {
-    if( element["datetime"]===inpfield){
-        Object.values(element).forEach(value =>{
-            row.append("td").text(value);
-        });
-        
-    };
-});
