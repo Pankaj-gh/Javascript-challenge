@@ -38,8 +38,8 @@ tableData.forEach(element => {
 
 // End of Part 1
 
-var button = d3.select("#filter-btn");
-button.on("click",function() {
+// var button = d3.select("#filter-btn");
+// button.on("click",function() {
 var filters = {};
 function filteredinfo(){
     var inpelement = d3.select(this).select("input");
@@ -73,12 +73,13 @@ function callfilter(){
 
     filteredData.forEach(element => {
         var row = summary.append("tr");
-        Object.values(element).forEach(value => {
+        Object.entries(element).forEach(function([key,value]){
+            
             var item = row.append("td").text(value);    
         });    
         });
 }
-}
+
 
 
 
