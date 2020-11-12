@@ -35,10 +35,14 @@ button.on("click",function() {
 
 var inpfield = d3.select("#datetime");
 var inpvalue = inpfield.property("value");
+var cityfield = d3.select("#City");
+var cityvalue = cityfield.property("value")
 
 
 
-var filteredData = tableData.filter(data => data.datetime === inpvalue);
+var filteredData = tableData.filter(data => data.datetime === inpvalue
+    // data.city.toLowerCase() === cityvalue.toLowerCase()
+    );
 
 
 
@@ -52,10 +56,13 @@ filteredData.forEach(element => {
 
     Object.values(element).forEach(value => {
         row.append("td").text(value);
+    
+    });
+     
     });
 
 });
-});
+
 
 // End of Part 1
 
