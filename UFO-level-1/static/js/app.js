@@ -35,8 +35,7 @@ button.on("click",function() {
 
 var inpfield = d3.select("#datetime");
 var inpvalue = inpfield.property("value");
-var cityfield = d3.select("#City");
-var cityvalue = cityfield.property("value")
+
 
 
 
